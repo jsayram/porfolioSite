@@ -7,6 +7,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { SmoothScrollToDirective, SmoothScrollDirective } from "../../node_modules/ng2-smooth-scroll";
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { SmoothScrollToDirective, SmoothScrollDirective } from "../../node_modul
     HeaderComponent,
     ProjectsComponent,
     SmoothScrollDirective,
-    SmoothScrollToDirective
+    SmoothScrollToDirective,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

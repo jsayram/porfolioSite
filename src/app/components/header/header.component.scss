@@ -1,3 +1,8 @@
+$max-width: 100%;
+$medium-width: 50%;
+$medium-lg-width: 70%;
+
+
 .view {
   background-color: transparent;
   height: 20px;
@@ -19,7 +24,7 @@
   }
 
    #card {
-  max-width: 100%;
+  max-width: $max-width;
   }
    
 }
@@ -28,11 +33,11 @@
 @media only screen and (min-width: 480px) {
 
 .intro {
-    min-height: 20em;
+    min-height: 37em;
     font-size: 15px;
   }
    #card {
-  max-width: 100%;
+  max-width: $max-width;
   }
 
 }
@@ -44,6 +49,10 @@
     font-size: 15px;
   }
 
+   #card {
+  max-width: $medium-lg-width;
+  }
+
 }
 
 /* TABLET LANDSCAPE / DESKTOP */
@@ -52,6 +61,11 @@
     min-height: 37em;
     font-size: 15px;
   }
+
+   #card {
+  max-width: $medium-width;
+  }
+
 }  
 
 
@@ -168,12 +182,13 @@ body {
   border-radius: 4px;
 }
 .card .cover{
-    height: 105px;
+    height: 100px;
     overflow: hidden;
     border-radius: 4px 4px 0 0;
 }
 .card .cover img{
     width: 100%;
+    // position: 100px;
 }
 .card .user{
     border-radius: 50%;
