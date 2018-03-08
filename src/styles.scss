@@ -1,63 +1,29 @@
 //Variables
-$c1: #3716b8;
-$c2: #53c68c;
-$c3: #f08b5b;
 
+$c1:#100e29;
+$c2:#283ba3;
+$c3:#455ff1;
+$c4:#51a2ec;
+$c5:#5dd6ec;
+$c6:#3448cf;
+$c7:#3d96b1;
 
 /*--------------- NAVIGATION BAR GLOBAL STYLES----------------------*/
 //when the navbar collapses or scrolls down the color will change accordingly
 .top-nav-collapse {
-  background-color: #4285F4;
+  background-color: #1D1273,;
   color: blue;
 }
 
 @media only screen and (max-width: 768px) {
     .navbar {
-        background-color: #4285F4;
+        background-color: #1D1273,;
     }
 }
-
-
 /*--------------- BODY GLOBAL STYLES----------------------*/
 body {
+  background: radial-gradient(at 0% 0%, $c1, $c2,  $c3, $c4, $c5, $c6, $c7);
+  font-family: 'sans-serif', roboto, serif;
+  font-weight: 150;
 
-  // background-position: center;
-  /* Fallback (could use .jpg/.png alternatively) */
-  background-color: $c2; // /* SVG fallback for IE 9 (could be data URI, or could use filter) */
-  // // background-image: url(fallback-gradient.svg); 
-  // /* Safari 4, Chrome 1-9, iOS 3.2-4.3, Android 2.1-3.0 */
-  // background-image:
-  //   -webkit-gradient(linear, left top, right top, from($c1), to($c2));
-  // /* Safari 5.1, iOS 5.0-6.1, Chrome 10-25, Android 4.0-4.3 */
-  // background-image:
-  //   -webkit-linear-gradient(left, $c1, $c2);
-  // /* Firefox 3.6 - 15 */
-  // background-image:
-  //   -moz-linear-gradient(left, $c1, $c2);
-  // /* Opera 11.1 - 12 */
-  // background-image:
-  //   -o-linear-gradient(left, $c1, $c2);
-  // /* Opera 15+, Chrome 25+, IE 10+, Firefox 16+, Safari 6.1+, iOS 7+, Android 4.4+ */
-  // background-image:
-  //   linear-gradient(to right, $c1, $c2);
-  // background: radial-gradient(circle at 90% 0,
-  // $c2,
-  // rgba(255, 0, 0, 0) 90.71%),
-  // radial-gradient(circle at 6.7% 75%,
-  // $c1,
-  // rgba(0, 0, 255, 0) 70.71%),
-  // radial-gradient(circle at 93.3% 75%,
-  // $c3,
-  // rgba(0, 255, 0, 0) 70.71%);
-  // border-radius: 50%;
-  background: radial-gradient(circle at 90% 20%,
-  #FF2E46,
-  rgba(255, 0, 0, 0) 50.71%),
-  radial-gradient(circle at 50.7% 0%,
-  #EFB3CE,
-  rgba(0, 0, 255, 0) 10.71%),
-  radial-gradient(circle at 13.3% 75%,
-  rgba(0, 255, 0, .5),
-  rgba(0, 255, 0, 0) 70.71%) #1D1273;
-  border-radius: 50%;
 }
