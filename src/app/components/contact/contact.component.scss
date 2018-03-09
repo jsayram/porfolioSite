@@ -1,0 +1,39 @@
+.purpleBack {
+	background-color: #1D1273;
+}
+
+textarea {
+    position: relative;
+    margin: 20px 0 0 20px;
+    z-index: 1;
+}
+.wrap {
+    position: relative;
+    display: inline-block;
+}
+.wrap:after {
+    content:"";
+    border-top: 20px solid black;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    -webkit-transform: rotate(-45deg);
+    z-index: 1;
+    opacity: 0.5;
+    position: absolute;
+    right: -18px;
+    bottom: -3px;
+    pointer-events: none;
+}
+.pull-tab {
+    height: 0px;
+    width: 0px;
+    border-top: 20px solid cyan;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    -webkit-transform: rotate(-45deg);
+    position: absolute;
+    bottom: 0px;
+    right: -15px;
+    pointer-events: none;
+    z-index: 2;
+}
