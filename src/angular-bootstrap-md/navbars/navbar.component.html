@@ -1,0 +1,23 @@
+<nav class="{{SideClass}}" #nav>
+  <div [ngClass]="{'container': containerInside}" [ngStyle]="{'display': displayStyle}" #container>
+    <ng-content select="logo"></ng-content>
+    <ng-content *ngIf="this.doubleNav == true" select="navlinks"></ng-content>
+    <div *ngIf="this.doubleNav == false">
+      <!-- class below did not have:  hamburger  hamburger--collapse , also added the following code [ngClass]="{'is-active': isactive}"-->
+      <!-- You can Change hamburger--collapse to one found in the npm hamburgers collection -->
+      <button class="navbar-toggler hamburger hamburger--spring-r" [ngClass]="{'is-active': isactive}" type="button" (click)="toggle($event)" mdbRippleRadius *ngIf="this.el.nativeElement.children.length !== 0">
+        <!-- span below had navbar-toggle-icon originialy -->
+        <span class="hamburger-box ">
+          <!-- this navbar below did is only for the hamburger-inner class -->
+           <span class="hamburger-inner"></span>
+        </span>
+      </button>
+    </div>
+    <div #navbar [style.height]="height" class="navbar-collapse collapse" [ngClass]="{'collapse': collapse, 'show': showClass, 'collapsing': collapsing}">
+      <ng-content select="links"></ng-content>
+    </div>
+  </div>
+</nav>
+
+
+<!-- NOTE TO CHANGE ADD THE HAMBURGER BUTTON FUNTIONALITY FOUND ABOVE , SEE navbar.components.ts file for added , this.isactive  inside show() and hide() functions--> 

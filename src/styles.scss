@@ -24,7 +24,7 @@ $c7:#3d96b1;
  */
 
 //SETTINSG FOR HAMBURGER 
-$hamburger-padding-x                       : 15px; //15px
+$hamburger-padding-x                       : 10px; //15px
 $hamburger-padding-y                       : 15px; //was 15px
 $hamburger-layer-width                     : 30px;
 $hamburger-layer-height                    : 2px;
@@ -124,11 +124,16 @@ $hamburger-hover-transition-timing-function: linear;
         background-color: #1D1273,;
     }
 }
+
+
+
+
+
 /*--------------- BODY GLOBAL STYLES----------------------*/
 body {
   background: radial-gradient(at 0% 0%, $c1, $c2,  $c3, $c4, $c5, $c6, $c7);
   font-family: 'sans-serif', roboto, serif;
-  font-weight: 150;
+  font-weight: 100;
 
 }
 

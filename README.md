@@ -30,13 +30,13 @@
 ](https://www.npmjs.com/package/ng2-smooth-scroll) <br>
 
 
-* <strong>*Using NPM hamburgers - with Angular Bootstrap-MD*<strong> <br>
-
+* <strong>Using NPM hamburgers - with Angular Bootstrap-MD<strong> <br>
 -Hamburgers is a collection of tasty CSS-animated hamburger icons. Also included is the source as a Sass library. It’s modular and customizable, so cook up your own hamburger.
--Detailed installation can be found in NPM website: I simply used the CSS file provided, set it in the global `styles.scss` file in my project. Then used the appropriate `hamburger-type` class in the html of desired component : Link to doc - [https://www.npmjs.com/package/hamburgers
+-Detailed installation can be found in NPM website: <i>simply used the CSS file provided</i>, set it in the global `styles.scss` file in my project. Then used the appropriate `hamburger-type` class in the html of desired component : Link to doc - [https://www.npmjs.com/package/hamburgers
 ](https://www.npmjs.com/package/hamburgers) <br>
 
-<small>*Note to have hamburbers work with Angular Bootstrap-MD and not be overwritten with updates, Take the `^` away symbol from your `angular-bootstrap-md` dependency your the `package.json` file:<small> <br> 
+
+<small>*Note to have hamburbers work with Angular Bootstrap-MD: Start by Taking off the `^` away symbol from your `angular-bootstrap-md` dependency your the `package.json` file:<small> <br> 
  ```
  "dependencies": {
     "angular-bootstrap-md": "^5.2.2", <========== should not have the ^ Take it OFF 
@@ -45,8 +45,15 @@
 <br>
 Steps taken to have it work with Angular Bootstrap MD `<mdb-navbar` component <br>
 1. set CSS Hamburger Styles in `styles.scss` <br> 
-2. Locate your `node_modules --> angular-bootstrap-md --> navbars` directory
-3. inside file`navbar.component.ts` : set variable `public isactive = false` inside your `NavbarComponent` export, should have something that looks like this..<br>
+2. Locate your `node_modules --> angular-bootstrap-md` directory and copy it to your `src` directory, because you'll have to make changes.
+*it is essential to do the above because when your `node_modules` is built with nmp they will be overwritten, specially when deploying*
+*You can take an extra step and just take out what you need, but I found it easier and less time consuming to just copy the whole `angular-boostrap-md`directory, then just modify what is needed* <br>
+3. Add the correct path to your imports in `app.module.ts` file, that is.. 
+```
+import { MDBBootstrapModule } from '../angular-bootstrap-md'; <===== ADD THIS LINE
+
+```
+4. inside angular-bootstrap-mds file `navbar.component.ts` : set variable `public isactive = false` inside the `NavbarComponent` export, should have something that looks like this..<br>
 ```
  .
  .
@@ -113,7 +120,7 @@ Done with `navbar.component.ts` , Save & Close the file.
 
 <br>
 
-4. Then inside your `navbar.component.html` add the code that can be found in the NPM hamburgers docs, You can follow the NPM Docs as this is the simple html file. I added the full code of my funtional `hamburger Button` here. what is before and after the dots is all that was altered form the orginal boostrap navbar compoment. <br>
+5. Then inside angular-bootstrap-mds `navbar.component.html` add the code that can be found in the NPM hamburgers docs, You can follow the NPM Docs as this is the simple html file. I added the full code of my funtional `hamburger Button` here. what is before and after the dots is all that was altered form the orginal boostrap navbar compoment. <br>
 ```
 <nav class="{{SideClass}}" #nav>
   <div [ngClass]="{'container': containerInside}" [ngStyle]="{'display': displayStyle}" #container>
@@ -145,7 +152,13 @@ Done with `navbar.component.ts` , Save & Close the file.
 
 ```
 *Switch the `hamburger--collapse` to your desired class found in NPM docs* <br>
-*Then just modify your `styles.css` to have it look have the look you want to achive, but the above takes care of the animation*
+*Then just modify your hamburger in `styles.scss` to have it look have the look you want to achive, but the above takes care of the animation*
+
+* <strong>Angular Google Maps (@AGM/Core)</strong> <br>
+-Angular 2+ components for Google Maps. Link for installation and docs: - [https://angular-maps.com/api-docs/agm-core/index.html
+](https://angular-maps.com/api-docs/agm-core/index.html) <br>
+
+
 
 
 

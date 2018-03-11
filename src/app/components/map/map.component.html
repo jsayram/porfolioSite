@@ -1,0 +1,11 @@
+<div class="container">
+
+	<h4 class="text-center dark-grey-text sans-serif">{{ title }}</h4>
+	<hr class="teal accent-3 mb-4 mx-auto text-center" style="width: 25%;">
+
+<!-- this creates a google map on the page with the given lat/lng from -->
+<!-- the component as the initial center of the map: -->
+<agm-map [latitude]="lat" [longitude]="lng" [backgroundColor]=bc [zoom]=9 [maxZoom]=13 [minZoom]=6 [panControl]=true  [usePanning]=true>
+  <agm-marker [latitude]="lat" [longitude]="lng" ></agm-marker>
+</agm-map>
+</div>
