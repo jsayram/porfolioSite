@@ -15,6 +15,18 @@ import { AgmCoreModule } from '@agm/core';
 import { MapComponent } from './components/map/map.component';
 
 
+//data service for mongodb
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { DataService} from './services/data.service';
+
+//for the form module
+import { FormsModule } from '@angular/forms';
+
+
+//for flash-messages
+import { FlashMessagesModule } from 'angular2-flash-messages';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,10 +44,13 @@ import { MapComponent } from './components/map/map.component';
     MDBBootstrapModule.forRoot(),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDZjllB6NtE4FdR0xzWg2ATx_0oSfSNWeI'
-    })
+    }),
+    HttpClientModule,
+    FormsModule,
+    FlashMessagesModule.forRoot()
   ],
   schemas: [NO_ERRORS_SCHEMA],
-  providers: [],
+  providers: [DataService, HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
