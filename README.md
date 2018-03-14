@@ -178,7 +178,7 @@ Done with `navbar.component.ts` , Save & Close the file.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.8.
 
 
-## NODE.js Server: 
+## NODE.js Server & Express: 
 
 Added Node.js `server.js` to run the app. This is so that the contact forms email server could be set up with the form. 
 
